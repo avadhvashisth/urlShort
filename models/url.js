@@ -3,15 +3,17 @@ const config = require('../config/database');
 
 const UrlSchema = mongoose.Schema({
     url:{
-        type:String
+        type: String,
+        required: true,
+        unique: true,
     },
     uniqueId:{
-        type:String,
-        default:null
+        type: String,
+        default: null,
     },
     name:{
-    	type:String,
-    	default:null
+    	type: String,
+    	default: null,
     }
 });
 

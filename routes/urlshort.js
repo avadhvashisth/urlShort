@@ -11,11 +11,19 @@ router.post('/url',urlencodedParser, (req,res,next)=>{
         url:req.body.url,
         uniqueId:uniqueid()
     });
-    Url.addUrl(newurl,(err,data)=>{
+    Url.find({uniqueId: newurl.uniqueId}, (err, rdata) => {
         if(err){
-            res.json({success:false,msg:'unable to add url'});
-        } else{
-            res.json({url: 'https://frozen-temple-15659.herokuapp.com/api/url/'+newurl.uniqueId});
+            res.json({url: 'Type another URL'});
+        }else if(rdata.length > 0){
+            res.json({url: 'The id already exist'});
+        }else{
+            Url.addUrl(newurl,(err,data)=>{
+                if(err){
+                    res.json({url: 'Type another URL'});
+                } else{
+                    res.json({url: 'https://frozen-temple-15659.herokuapp.com/api/url/'+newurl.uniqueId});
+                }
+            });
         }
     });
 });
@@ -39,12 +47,19 @@ router.post('/custom',urlencodedParser, (req,res,next)=>{
         url:req.body.url,
         name:req.body.name
     });
-    console.log(req.body.url);
-    Url.addUrl(newurl,(err,data)=>{
+    Url.find({name: req.body.name}, (err, rdata) => {
         if(err){
-            res.json({success:false,msg:'unable to add url'});
-        } else{
-            res.json({url: 'https://frozen-temple-15659.herokuapp.com/api/custom/'+newurl.name});
+            res.json({url: 'Type another URL'});
+        }else if(rdata.length > 0){
+            res.json({url: 'The custom name already exist'});
+        }else{
+            Url.addUrl(newurl,(err,data)=>{
+                if(err){
+                    res.json({url: 'Type another URL'});
+                } else{
+                    res.json({url: 'https://frozen-temple-15659.herokuapp.com/api/custom/'+newurl.name});
+                }
+            });
         }
     });
 });
