@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <title>URL Shortener</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="text-align: center;" class="header">
+                URL Shortener History
+            </h1>
+            
+            <% for(var i=0; i < urls.length; i++){ %>
+              <ul>
+                <li><%= "---------- URL" + i + " -------------"%></li>
+                <li><%= "ORIGINAL= " + urls[i].url %></li>
+                <%if (urls[i].uniqueId != null) { %>
+                    <li><%= "SHORTENED URL= " + "localhost:4000/api/url/" + urls[i].uniqueId %></li>
+                <% } %>
+                <%if (urls[i].name != null) { %>
+                    <li><%= "SHORTENED URL= " + "localhost:4000/api/custom/" + urls[i].name %></li>
+                <% } %>
+              </ul>
+            <% } %>
+        </div>
+    </body>
+</html>
