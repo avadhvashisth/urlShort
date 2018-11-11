@@ -15,10 +15,10 @@
                 <li><%= "---------- URL" + i + " -------------"%></li>
                 <li><%= "ORIGINAL= " + urls[i].url %></li>
                 <%if (urls[i].uniqueId != null) { %>
-                    <li><%= "SHORTENED URL= " + "localhost:4000/api/url/" + urls[i].uniqueId %></li>
+                    <li><%= "SHORTENED URL= " + "https://frozen-temple-15659.herokuapp.com/api/url/" + urls[i].uniqueId %></li>
                 <% } %>
                 <%if (urls[i].name != null) { %>
-                    <li><%= "SHORTENED URL= " + "localhost:4000/api/custom/" + urls[i].name %></li>
+                    <li><%= "SHORTENED URL= " + "https://frozen-temple-15659.herokuapp.com/api/custom/" + urls[i].name %></li>
                 <% } %>
               </ul>
             <% } %>

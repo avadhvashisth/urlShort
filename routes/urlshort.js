@@ -15,7 +15,7 @@ router.post('/url',urlencodedParser, (req,res,next)=>{
         if(err){
             res.json({success:false,msg:'unable to add url'});
         } else{
-            res.json({url: 'localhost:4000/api/url/'+newurl.uniqueId});
+            res.json({url: 'https://frozen-temple-15659.herokuapp.com/api/url/'+newurl.uniqueId});
         }
     });
 });
@@ -44,7 +44,7 @@ router.post('/custom',urlencodedParser, (req,res,next)=>{
         if(err){
             res.json({success:false,msg:'unable to add url'});
         } else{
-            res.json({url: 'localhost:4000/api/custom/'+newurl.name});
+            res.json({url: 'https://frozen-temple-15659.herokuapp.com/api/custom/'+newurl.name});
         }
     });
 });
