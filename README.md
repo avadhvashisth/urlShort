@@ -1,1 +1,1 @@
-url shortener microservice.. micro project using nodejs 
+A URL shortener is a Web tool that will create a short Uniform Resource Locator (URL) or Web page address from a long one so that the short version, which is easier to remember and enter, can be used instead
