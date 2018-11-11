@@ -1,4 +1,4 @@
 module.exports ={
-    database:'mongodb://localhost:27017/shorten',
+    database:'mongodb://Avadh:avadh123@ds113442.mlab.com:13442/short',
     secret:'test'
 }
