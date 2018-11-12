@@ -37,7 +37,11 @@
       function horizontal() {
         var hori = document.createElement("hr");
         var element = document.getElementById("hello");
-        element.appendChild(hori);
+        var flag = 0;
+        if(flag === 0){
+          element.appendChild(hori);
+          flag = 1;
+        }
       }
       function copied() {
         document.getElementById("ahem").style.display = "inline";
