@@ -33,7 +33,12 @@ app.use('/',index);
 app.get('/custom', (req, res) => {
 	res.render('custom');
 });
-
+app.get('/random', (req, res) => {
+	res.render('random');
+});
+app.get('/main', (req, res) => {
+	res.render('main');
+});
 app.listen(port,() =>{
 
 });

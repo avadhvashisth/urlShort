@@ -12,8 +12,8 @@ $(document).ready(function(){
         data: todo,
         success: function(data){
           //do something with the data via front-end framework
-          $('a').text(data.url);
-          $('a').attr("href", data.url);
+          $('#myInput').text(data.url);
+          $('#myInput').attr("href", data.url);
           $('#copyUrl').css("display", "block");
         }
       });
@@ -30,5 +30,5 @@ $(document).ready(function(){
     $temp.val($(element).text()).select();
     document.execCommand("copy");
     $temp.remove();
-    alert("Copied Url- "+$(element).text());
+    //alert("Copied Url- "+$(element).text());
   }

@@ -47,6 +47,7 @@ router.post('/custom',urlencodedParser, (req,res,next)=>{
         url:req.body.url,
         name:req.body.name
     });
+    console.log(newurl);
     Url.find({name: req.body.name}, (err, rdata) => {
         if(err){
             res.json({url: 'Type another URL'});

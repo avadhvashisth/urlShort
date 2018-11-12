@@ -19,8 +19,7 @@
                 Enter your URL
             </h1>
             <form method="post">
-             <input style="width: 100%; margin: 10px; padding: 10px; border: 2px solid skyblue; border-radius: 10px;" type="text" name="url" placeholder="Add new item.." required>
-             <input style="width: 100%; margin: 10px; padding: 10px; border: 2px solid skyblue; border-radius: 10px;" type="text" name="name" placeholder="Enter name" required>
+             <input style="width: 100%; margin: 10px; padding: 10px; border: 2px solid skyblue; border-radius: 10px;" type="text" name="item" placeholder="Add new item.." required>
              <button style="text-align: center; margin: auto; display: block;" class="btn btn-primary btn-lg" type="submit" name="button" onclick="horizontal()">Create url</button>
             </form>
             <br>
@@ -29,7 +28,7 @@
             <a href="" id="myInput"></a>
             <button style="display:none;" id="copyUrl" onclick="copied();copyToClipboard('#myInput');" class="btn btn-primary btn-lg">Copy text!</button>
             <span style="display: none" id="ahem" class='pink-text'>Link Copied</span>
-            <script type="text/javascript" src="assets/url-short-custom.js"></script>
+            <script type="text/javascript" src="assets/url-short.js"></script>
             
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
